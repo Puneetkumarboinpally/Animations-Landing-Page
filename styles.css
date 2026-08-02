@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;@600&family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@500;@600&family=Lato:wght@400;700&display=swap");
 
 * {
   padding: 0;
@@ -18,17 +18,28 @@ p {
 main {
   min-height: 120vh;
 }
-/* top container */
+
+/*---------------------
+    TOP CONTAINER
+ ----------------------*/
 .top-container {
   height: 65svh;
   width: 100%;
   background-color: orangered;
   overflow: hidden;
 }
+
+/*---------------------
+    NAVBAR
+ ----------------------*/
 .navbar {
   height: 35%;
   width: 100%;
 }
+
+/*--------------------------
+    LANDING PAGE CONTAINER
+ --------------------------*/
 .landing-page-text {
   height: 65%;
   width: 100%;
@@ -38,12 +49,15 @@ main {
 }
 .landing-page-text h1 {
   font-size: 14rem;
-  font-weight: 400;
+  font-weight: 500;
   color: black;
+  letter-spacing: 0.5rem;
   animation: animate-up 0.8s ease-out;
   will-change: transform;
 }
-
+/*-----------------------------
+    LANDING PAGE MEDIA QUERY 
+ ------------------------------*/
 @media (max-width: 786px) {
   .landing-page-text h1 {
     font-size: 10rem;
@@ -59,7 +73,9 @@ main {
     font-size: 5rem;
   }
 }
-
+/*-------------------------------
+    KEY FRAMES FOR LANDING PAGE 
+ --------------------------------*/
 @keyframes animate-up {
   from {
     transform: translateY(100%);
@@ -68,7 +84,9 @@ main {
     transform: translateY(0);
   }
 }
-/* bottom container */
+/*-------------------------
+    BOTTOM PAGE CONTAINER
+ --------------------------*/
 .bottom-container {
   height: 55vh;
   width: 100%;
@@ -78,13 +96,16 @@ main {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transition: transform 1.5s ease-out;
+  transition: transform 1.2s ease-out;
   animation: animate-scale 0.8s ease-out;
   will-change: transform;
 }
 .bottom-container img:hover {
   transform: scale(1.4);
 }
+/*---------------------------------
+    KEY FRAMES FOR IMAGE CONTAINER
+ ----------------------------------*/
 @keyframes animate-scale {
   from {
     transform: scale(1.4);
