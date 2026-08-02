@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;@600&family=Lato:wght@400;700&display=swap");
 
 * {
   padding: 0;
@@ -8,10 +8,88 @@
 h1,
 h2,
 span {
-  font-family: "Google san", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 h3,
 h4,
 p {
   font-family: "Lato", sans-serif;
+}
+main {
+  min-height: 120vh;
+}
+/* top container */
+.top-container {
+  height: 65svh;
+  width: 100%;
+  background-color: orangered;
+  overflow: hidden;
+}
+.navbar {
+  height: 35%;
+  width: 100%;
+}
+.landing-page-text {
+  height: 65%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+}
+.landing-page-text h1 {
+  font-size: 14rem;
+  font-weight: 400;
+  color: black;
+  animation: animate-up 0.8s ease-out;
+  will-change: transform;
+}
+
+@media (max-width: 786px) {
+  .landing-page-text h1 {
+    font-size: 10rem;
+  }
+}
+@media (max-width: 480px) {
+  .landing-page-text h1 {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 320px) {
+  .landing-page-text h1 {
+    font-size: 5rem;
+  }
+}
+
+@keyframes animate-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+/* bottom container */
+.bottom-container {
+  height: 55vh;
+  width: 100%;
+  overflow: hidden;
+}
+.bottom-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 1.5s ease-out;
+  animation: animate-scale 0.8s ease-out;
+  will-change: transform;
+}
+.bottom-container img:hover {
+  transform: scale(1.4);
+}
+@keyframes animate-scale {
+  from {
+    transform: scale(1.4);
+  }
+  to {
+    transform: scale(1);
+  }
 }
