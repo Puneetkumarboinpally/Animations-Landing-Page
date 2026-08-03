@@ -194,8 +194,10 @@ main {
 .middle-section {
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
 }
+/*-------------------------------
+    CARD CONTAINER
+ --------------------------------*/
 .card-container {
   padding: 1rem;
   display: flex;
@@ -205,6 +207,9 @@ main {
   overflow: hidden;
   transition: all 0.3s ease-out;
 }
+/*-------------------------------
+    CARD LEFT CONTAINER
+ --------------------------------*/
 .card-left-container {
   display: flex;
   flex: 1;
@@ -212,10 +217,16 @@ main {
 .card-left-container .number {
   font-size: 8rem;
 }
+/*-------------------------------
+    CARD RIGHT CONTAINER
+ --------------------------------*/
 .card-right-container {
   width: 50%;
   display: flex;
 }
+/*-------------------------------
+    CARD DESCRIPTION CONTAINER
+ --------------------------------*/
 .card-description-container {
   display: flex;
   flex: 0.45;
@@ -225,6 +236,9 @@ main {
 .card-description-container p {
   width: 30ch;
 }
+/*-------------------------------
+    CARD IMAGE CONTAINER
+ --------------------------------*/
 .card-image-container {
   display: flex;
   flex: 0.55;
@@ -236,6 +250,9 @@ main {
   object-fit: cover;
   aspect-ratio: 1;
 }
+/*-------------------------------
+    KEY FRAMES FOR CARD SECTION 
+ --------------------------------*/
 
 @keyframes slide-up-animation {
   from {
@@ -244,7 +261,9 @@ main {
   to {
     transform: translateY(0%);
   }
-}
+} /*-------------------------------
+    HOVER FOR CARD CONTAINER
+ --------------------------------*/
 .card-container:hover {
   background-color: orangered;
   color: whitesmoke;
@@ -253,6 +272,9 @@ main {
     visibility: visible;
   }
 }
+/*-------------------------------
+     MEDIA QUERY FOR CARD SECTION
+ --------------------------------*/
 @media (max-width: 768px) {
   .card-right-container {
     flex-direction: column;
@@ -272,3 +294,6 @@ main {
     font-size: 6rem;
   }
 }
+/*-------------------------------
+    KEY FRAMES FOR LANDING PAGE 
+ --------------------------------*/
