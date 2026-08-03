@@ -363,3 +363,27 @@ main {
   filter: saturate(1);
   transform: scale(1.2);
 }
+@media (max-width: 786px) {
+  .zoom-image-container img {
+    height: 200px;
+    width: 200px;
+  }
+  .zoom-container p {
+    max-width: 200px;
+    text-wrap: balance;
+  }
+}
+@media (max-width: 480px) {
+  .zoom-section {
+    justify-content: center;
+    gap: 2px;
+  }
+  .zoom-image-container img {
+    height: 150px;
+    width: 150px;
+  }
+  .zoom-container p {
+    max-width: 180px;
+    text-wrap: balance;
+  }
+}
