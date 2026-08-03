@@ -188,3 +188,143 @@ main {
     transform: scale(1);
   }
 }
+/*---------------------------------
+    MIDDLE CONTAINER
+ ----------------------------------*/
+.middle-section {
+  display: flex;
+  flex-direction: column;
+}
+/*-------------------------------
+    CARD CONTAINER
+ --------------------------------*/
+.card-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+/*-------------------------------
+    CARD LEFT CONTAINER
+ --------------------------------*/
+.card-left-container {
+  display: flex;
+  flex: 1;
+}
+.card-left-container .number {
+  font-size: 8rem;
+}
+/*-------------------------------
+    CARD RIGHT CONTAINER
+ --------------------------------*/
+.card-right-container {
+  width: 50%;
+  display: flex;
+}
+/*-------------------------------
+    CARD DESCRIPTION CONTAINER
+ --------------------------------*/
+.card-description-container {
+  display: flex;
+  flex: 0.45;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.card-description-container p {
+  width: 30ch;
+}
+/*-------------------------------
+    CARD IMAGE CONTAINER
+ --------------------------------*/
+.card-image-container {
+  display: flex;
+  flex: 0.55;
+  visibility: hidden;
+  gap: 10px;
+}
+.card-right-container img {
+  width: 50%;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+/*-------------------------------
+    KEY FRAMES FOR CARD SECTION 
+ --------------------------------*/
+
+@keyframes slide-up-animation {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+} /*-------------------------------
+    HOVER FOR CARD CONTAINER
+ --------------------------------*/
+.card-container:hover {
+  background-color: orangered;
+  color: whitesmoke;
+  .card-image-container {
+    animation: slide-up-animation 0.8s ease-out;
+    visibility: visible;
+  }
+}
+/*-------------------------------
+     MEDIA QUERY FOR CARD SECTION
+ --------------------------------*/
+@media (max-width: 768px) {
+  .card-right-container {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .card-description-container p {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .card-container {
+    align-items: start;
+  }
+  .card-left-container .number {
+    font-size: 6rem;
+  }
+}
+/*-------------------------------
+    MARQUEE SECTION
+ --------------------------------*/
+.marquee-section {
+  margin: 2rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-animate 15s linear infinite;
+}
+.marquee-image-container {
+  display: flex;
+  flex-shrink: 0;
+}
+.marquee-image-container img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+@keyframes marquee-animate {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+/*-------------------------------
+    ZOOM SECTION
+ --------------------------------*/
