@@ -228,6 +228,7 @@ main {
 .card-image-container {
   display: flex;
   flex: 0.55;
+  visibility: hidden;
   gap: 10px;
 }
 .card-right-container img {
@@ -249,5 +250,25 @@ main {
   color: whitesmoke;
   .card-image-container {
     animation: slide-up-animation 0.8s ease-out;
+    visibility: visible;
+  }
+}
+@media (max-width: 768px) {
+  .card-right-container {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .card-description-container p {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .card-container {
+    align-items: start;
+  }
+  .card-left-container .number {
+    font-size: 6rem;
   }
 }
