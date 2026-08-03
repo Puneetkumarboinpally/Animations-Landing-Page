@@ -295,5 +295,36 @@ main {
   }
 }
 /*-------------------------------
-    KEY FRAMES FOR LANDING PAGE 
+    MARQUEE SECTION
+ --------------------------------*/
+.marquee-section {
+  margin: 2rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-animate 15s linear infinite;
+}
+.marquee-image-container {
+  display: flex;
+  flex-shrink: 0;
+}
+.marquee-image-container img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+@keyframes marquee-animate {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+/*-------------------------------
+    ZOOM SECTION
  --------------------------------*/
