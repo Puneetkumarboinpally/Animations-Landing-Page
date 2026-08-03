@@ -192,15 +192,11 @@ main {
     MIDDLE CONTAINER
  ----------------------------------*/
 .middle-section {
-  height: 100svh;
-  width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 4rem;
 }
 .card-container {
-  height: 40%;
-  width: 100%;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -210,21 +206,19 @@ main {
   transition: all 0.3s ease-out;
 }
 .card-left-container {
-  height: 100%;
-  width: 50%;
+  display: flex;
+  flex: 1;
 }
 .card-left-container .number {
-  font-size: 12rem;
+  font-size: 8rem;
 }
 .card-right-container {
-  height: 100%;
   width: 50%;
   display: flex;
 }
 .card-description-container {
-  height: 100%;
-  width: 45%;
   display: flex;
+  flex: 0.45;
   justify-content: space-between;
   flex-direction: column;
 }
@@ -232,9 +226,8 @@ main {
   width: 30ch;
 }
 .card-image-container {
-  height: 100%;
-  width: 55%;
   display: flex;
+  flex: 0.55;
   gap: 10px;
 }
 .card-right-container img {
