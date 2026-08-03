@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;@600&family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@500;@600&family=Lato:wght@400;700&display=swap");
 
 * {
   padding: 0;
@@ -18,17 +18,102 @@ p {
 main {
   min-height: 120vh;
 }
-/* top container */
+
+/*---------------------
+    TOP CONTAINER
+ ----------------------*/
 .top-container {
-  height: 65svh;
+  height: 70svh;
   width: 100%;
   background-color: orangered;
   overflow: hidden;
 }
+
+/*---------------------
+    NAVBAR
+ ----------------------*/
 .navbar {
   height: 35%;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
 }
+/*---------------------
+    NAVBAR LEFT SECTION
+ ----------------------*/
+.left-section {
+  width: 50%;
+}
+.left-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2;
+}
+.left-section ul li {
+  list-style: none;
+  font-size: 1rem;
+  padding: 0.1rem 0;
+  color: black;
+  transition: all 0.5s ease-out;
+  animation: animate-light 2.5s ease-out;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 4px;
+}
+.left-section ul li::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: black;
+  transition: transform 0.4s ease;
+}
+.left-section ul li:hover::before {
+  animation: animate-slide 0.5s ease-out forwards;
+  transform-origin: left;
+}
+@keyframes animate-slide {
+  from {
+    width: 20px;
+  }
+  to {
+    width: 40px;
+  }
+}
+/*---------------------
+    NAVBAR RIGHT SECTION
+ ----------------------*/
+.right-section {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+}
+.right-section p {
+  width: 30ch;
+  line-height: 1.5em;
+  animation: animate-light 2.5s ease-out;
+}
+@keyframes animate-light {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 480px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+  .right-section {
+    display: none;
+  }
+}
+/*--------------------------
+    LANDING PAGE CONTAINER
+ --------------------------*/
 .landing-page-text {
   height: 65%;
   width: 100%;
@@ -37,13 +122,16 @@ main {
   overflow: hidden;
 }
 .landing-page-text h1 {
-  font-size: 14rem;
-  font-weight: 400;
+  font-size: 12rem;
+  font-weight: 500;
   color: black;
+  letter-spacing: 0.5rem;
   animation: animate-up 0.8s ease-out;
   will-change: transform;
 }
-
+/*-----------------------------
+    LANDING PAGE MEDIA QUERY 
+ ------------------------------*/
 @media (max-width: 786px) {
   .landing-page-text h1 {
     font-size: 10rem;
@@ -59,7 +147,9 @@ main {
     font-size: 5rem;
   }
 }
-
+/*-------------------------------
+    KEY FRAMES FOR LANDING PAGE 
+ --------------------------------*/
 @keyframes animate-up {
   from {
     transform: translateY(100%);
@@ -68,9 +158,11 @@ main {
     transform: translateY(0);
   }
 }
-/* bottom container */
+/*-------------------------
+    BOTTOM PAGE CONTAINER
+ --------------------------*/
 .bottom-container {
-  height: 55vh;
+  height: 50svh;
   width: 100%;
   overflow: hidden;
 }
@@ -78,13 +170,16 @@ main {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transition: transform 1.5s ease-out;
+  transition: transform 1.2s ease-out;
   animation: animate-scale 0.8s ease-out;
   will-change: transform;
 }
 .bottom-container img:hover {
   transform: scale(1.4);
 }
+/*---------------------------------
+    KEY FRAMES FOR IMAGE CONTAINER
+ ----------------------------------*/
 @keyframes animate-scale {
   from {
     transform: scale(1.4);
