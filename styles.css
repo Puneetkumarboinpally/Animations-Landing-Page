@@ -387,3 +387,38 @@ main {
     text-wrap: balance;
   }
 }
+.footer-text {
+  padding-bottom: 1rem;
+  overflow: hidden;
+}
+
+.footer-text h2 {
+  font-size: 10rem;
+  transition: color 0.3s ease-out;
+}
+.footer-text h2:hover {
+  color: orangered;
+}
+@media (max-width: 768px) {
+  .footer-text h2 {
+    font-size: 8rem;
+  }
+}
+@media (max-width: 480px) {
+  .footer-text {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-text h2 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 320px) {
+  .footer-text {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-text h2 {
+    font-size: 4rem;
+  }
+}
