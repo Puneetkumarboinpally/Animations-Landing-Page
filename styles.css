@@ -328,3 +328,97 @@ main {
 /*-------------------------------
     ZOOM SECTION
  --------------------------------*/
+.zoom-section {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  margin: 4rem 0;
+  padding: 2rem;
+}
+.zoom-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.zoom-image-container {
+  overflow: hidden;
+}
+.zoom-image-container img {
+  display: block;
+  height: 320px;
+  width: 320px;
+  object-fit: cover;
+  cursor: pointer;
+  transition:
+    filter 0.4s ease-out,
+    transform 0.4s ease-out;
+  border-radius: 10px;
+  filter: saturate(0);
+}
+.zoom-container p {
+  max-width: 300px;
+}
+
+.zoom-container img:hover {
+  filter: saturate(1);
+  transform: scale(1.2);
+}
+@media (max-width: 786px) {
+  .zoom-image-container img {
+    height: 200px;
+    width: 200px;
+  }
+  .zoom-container p {
+    max-width: 200px;
+    text-wrap: balance;
+  }
+}
+@media (max-width: 480px) {
+  .zoom-section {
+    justify-content: center;
+    gap: 2px;
+  }
+  .zoom-image-container img {
+    height: 150px;
+    width: 150px;
+  }
+  .zoom-container p {
+    max-width: 180px;
+    text-wrap: balance;
+  }
+}
+.footer-text {
+  padding-bottom: 1rem;
+  overflow: hidden;
+}
+
+.footer-text h2 {
+  font-size: 10rem;
+  transition: color 0.3s ease-out;
+}
+.footer-text h2:hover {
+  color: orangered;
+}
+@media (max-width: 768px) {
+  .footer-text h2 {
+    font-size: 8rem;
+  }
+}
+@media (max-width: 480px) {
+  .footer-text {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-text h2 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 320px) {
+  .footer-text {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-text h2 {
+    font-size: 4rem;
+  }
+}
